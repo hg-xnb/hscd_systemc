@@ -58,104 +58,112 @@ After install SystemC, i make my own script for quick make Makefile to **compile
 **init_systemc:**
 
 ```zsh
-#! /bin/zsh
+	#! /bin/zsh
 
-export BOLD="\e[1m"
-export FAINT="\e[2m"
-export ITALIC="\e[3m"
-export UNDERLINED="\e[4m"
+	export BOLD="\e[1m"
+	export FAINT="\e[2m"
+	export ITALIC="\e[3m"
+	export UNDERLINED="\e[4m"
 
-export BLACK="\e[30m"
-export RED="\e[31m"
-export GREEN="\e[32m"
-export YELLOW="\e[33m"
-export BLUE="\e[34m"
-export MEGENTA="\e[35m"
-export CYAN="\e[36m"
-export LIGHT_GRAY="\e[37m"
-export NORMAL="\e[0m"
-export SYSTEMC_INIT_DIR=/mnt/sda1/Linux_Applications/.my_bin/systemc_init
+	export BLACK="\e[30m"
+	export RED="\e[31m"
+	export GREEN="\e[32m"
+	export YELLOW="\e[33m"
+	export BLUE="\e[34m"
+	export MEGENTA="\e[35m"
+	export CYAN="\e[36m"
+	export LIGHT_GRAY="\e[37m"
+	export NORMAL="\e[0m"
+	export SYSTEMC_INIT_DIR=/mnt/sda1/Linux_Applications/.my_bin/systemc_init
 
 
-# printf "${BOLD}${BLUE_WHITE}1. Clone \`Makefile\` from <systemc_init/Makefile> ...\n${NORMAL}"
-printf "1. Enter the *cpp filename (e.g hehe NOT hehe.cpp)\n${BOLD}CPP_FILENAME${NORMAL}="
-read CPP_FILENAME
+	# printf "${BOLD}${BLUE_WHITE}1. Clone \`Makefile\` from <systemc_init/Makefile> ...\n${NORMAL}"
+	printf "1. Enter the *cpp filename (w/0 space(s))\nE.g: 'hehe' NOT 'he he.cpp'\n\n${BOLD}CPP_FILENAME${NORMAL}="
+	read CPP_FILENAME
 
-echo
+	echo
 
-if [ -z "$CPP_FILENAME" ]; then
-	printf "${YELLOW}W${NORMAL}: CPP_FILENAME is ${UNDERLINED}empty${NORMAL}! \n--> use default value: CPP_FILENAME=sc_proj\n"
-	CPP_FILENAME='sc_proj'
-fi
+	if [ -z "$CPP_FILENAME" ]; then
+		printf "${YELLOW}W${NORMAL}: CPP_FILENAME is ${UNDERLINED}empty${NORMAL}! \n--> use default value: CPP_FILENAME=sc_proj\n"
+		CPP_FILENAME='sc_proj'
+	fi
 
-echo
-printf "2. Make empty $CPP_FILENAME.cpp file...\n"
+	echo
+	printf "2. Make empty $CPP_FILENAME.cpp file...\n"
 
-if [ -e "$CPP_FILENAME.cpp" ]; then
-	printf "${YELLOW}W${NORMAL}: $CPP_FILENAME.cpp ${UNDERLINED}existed${NORMAL}!\n--> Aborted!\n"
-else
-	touch "$CPP_FILENAME.cpp"
-	printf "Done!\n"
-fi
+	if [ -e "$CPP_FILENAME.cpp" ]; then
+		printf "${YELLOW}W${NORMAL}: $CPP_FILENAME.cpp ${UNDERLINED}existed${NORMAL}!\n--> Aborted!\n"
+	else
+		touch "$CPP_FILENAME.cpp"
+		
+		printf "#include <systemc.h>\n" 			| tee -a ./$CPP_FILENAME.cpp
+		printf "\n" 						| tee -a ./$CPP_FILENAME.cpp
+		printf "int sc_main(int argc, char* argv[]) {\n" 	| tee -a ./$CPP_FILENAME.cpp
+		printf "\t/// your code here!\n" 			| tee -a ./$CPP_FILENAME.cpp
+		printf "\treturn 0;\n" 					| tee -a ./$CPP_FILENAME.cpp
+		printf "}\n" 						| tee -a ./$CPP_FILENAME.cpp
+		
+		printf "\nDONE!\n"
+	fi
 
-echo
-printf "3. Clone Makefile into the project...\n"
-CLONE_FLAG=1
+	echo
+	printf "3. Clone Makefile into the project...\n"
+	CLONE_FLAG=1
 
-if [ -e 'Makefile' ]; then
-	printf "${RED}Error${NORMAL}: Makefile existed, remove the existed Makefile to continue!\n"
-	CLONE_FLAG=0
-	exit 1
-fi
+	if [ -e 'Makefile' ]; then
+		printf "${RED}Error${NORMAL}: Makefile existed, remove the existed Makefile to continue!\n"
+		CLONE_FLAG=0
+		exit 1
+	fi
 
-if [ $CLONE_FLAG -eq 1 ]; then  
-	cat $SYSTEMC_INIT_DIR/Makefile.p1 | tee -a ./Makefile
-	echo "SRC=$CPP_FILENAME.cpp" | tee -a ./Makefile
-	cat $SYSTEMC_INIT_DIR/Makefile.p2 | tee -a ./Makefile
+	if [ $CLONE_FLAG -eq 1 ]; then  
+		cat $SYSTEMC_INIT_DIR/Makefile.p1 | tee -a ./Makefile
+		echo "SRC=$CPP_FILENAME.cpp" | tee -a ./Makefile
+		cat $SYSTEMC_INIT_DIR/Makefile.p2 | tee -a ./Makefile
+		exit 0
+	fi
+
+	printf "\n${BOLD}${BLUE_WHITE}DONE!${NORMAL} Check \`SRC\` in ${BOLD}Makefile${NORMAL} file and change if needed\!\n"
 	exit 0
-fi
-
-printf "\n${BOLD}${BLUE_WHITE}DONE!${NORMAL} Check \`SRC\` in ${BOLD}Makefile${NORMAL} file and change if needed\!\n"
-exit 0
 ```
 
 **Makefile.p1:**
 
 ```
-######################## SYSTEMC MAKEFILE ##########################
-# Please change SRC (your input *.cpp file)                        #
-####################################################################
+	######################## SYSTEMC MAKEFILE ##########################
+	# Please change SRC (your input *.cpp file)                        #
+	####################################################################
 
-#! /bin/zsh
+	#! /bin/zsh
 ```
 
 **Makefile.p2:**
 
 ```
 
-OBJ = $(SRC:.cpp=.o)
-OUT = $(basename $(firstword $(SRC)))
-CXX = g++
-CXXFLAGS = -I. -I$(SYSTEMC_HOME)/include
-LDFLAGS = -L. -L$(SYSTEMC_HOME)/lib-linux64 -Wl,-rpath=$(SYSTEMC_HOME)/lib-linux64
-LDLIBS = -lsystemc -lm
-all: $(OUT)
+	OBJ = $(SRC:.cpp=.o)
+	OUT = $(basename $(firstword $(SRC)))
+	CXX = g++
+	CXXFLAGS = -I. -I$(SYSTEMC_HOME)/include
+	LDFLAGS = -L. -L$(SYSTEMC_HOME)/lib-linux64 -Wl,-rpath=$(SYSTEMC_HOME)/lib-linux64
+	LDLIBS = -lsystemc -lm
+	all: $(OUT)
 
-$(OUT): $(OBJ)
-	$(CXX) -o $@ $^ $(LDFLAGS) $(LDLIBS)
+	$(OUT): $(OBJ)
+		$(CXX) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	%.o: %.cpp
+		$(CXX) $(CXXFLAGS) -c $< -o $@
 
-clean:
-	rm -f $(OBJ) $(OUT)
+	clean:
+		rm -f $(OBJ) $(OUT)
 
-exec:
-	./$(OUT)
+	exec:
+		./$(OUT)
 
-####################################################################
-#                                                                  #
-####################################################################
+	####################################################################
+	#                                                                  #
+	####################################################################	
 ```
 
 Finally, add these files into the `PATH` to make it run anywhere :))
