@@ -47,8 +47,20 @@ int sc_main(int argc, char* argv[]) {
 		else
 			{b0.write(0); b1.write(1);}
 		mono_pulse(clk);
+		
+		/// result
 		cout << "processing " << B <<   "\t -> Status: " << ((ul.read() == 1)?"UNLOCK\n":"LOCK\n");
+		if(ul.read()==true){
+			mono_pulse(clk);
+			mono_pulse(clk);
+			rst.write(1); 
+			mono_pulse(clk);
+			rst.write(0);
+		}
 	}
+
+	mono_pulse(clk);
+	mono_pulse(clk);
 
 	cout << "Final status: " << ((ul.read() == 1)?"UNLOCK\n":"LOCK\n");
     cout << "\nFinished!\n";

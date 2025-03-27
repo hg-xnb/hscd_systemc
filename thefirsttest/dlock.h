@@ -29,28 +29,27 @@ SC_MODULE (DLOCK){
 					state = 0x0;
 				}else{
                     /// check state
-                    if(state > 0x7) {
-                        /// reset if press more :))
-                        state = 0x0;
-                        UNLOCK.write(false);
-                    }
-                    /// check input?
-                    if( B0.read() != B1.read() ){
-                        b = (B0.read() == true) ? 0x0 : 0x1;
-                        expected_b = bool(KEY & (1<<state));
-                        if( b != expected_b ){
-                            /// reset
-                            UNLOCK.write(false);
-                            state = 0x0;
-                        }else{
-                            if(state == 7){
-                                /// unlock :v
-                                UNLOCK.write(true);
-                                state = 0x8;
+                    if(state < 0x8) {
+                        /// check input?
+                        if( B0.read() != B1.read() ){
+                            b = (B0.read() == true) ? 0x0 : 0x1;
+                            expected_b = bool(KEY & (1<<state));
+                            if( b != expected_b ){
+                                /// reset
+                                UNLOCK.write(false);
+                                state = 0x0;
                             }else{
-                                /// move to next state
-                                state = (state < 0x7)?(state+0x1):0x0;
+                                if(state == 7){
+                                    /// unlock :v
+                                    UNLOCK.write(true);
+                                    state = 0x8;
+                                }else{
+                                    /// move to next state
+                                    ++state;
+                                }
                             }
+                        }else{
+                            /// do nothin'
                         }
                     }else{
                         /// do nothin'
