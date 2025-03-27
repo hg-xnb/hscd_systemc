@@ -30,8 +30,9 @@ int sc_main(int argc, char* argv[]) {
 		pulse.write(0);
 	};
 
-	cout << "Start sim...\n\n";
+	cout << "Start sim...\n";
 
+	cout << "Make reset...\n\n";
 	/// make reset state
 	b0.write(0);b1.write(0);
 	rst.write(1); 
