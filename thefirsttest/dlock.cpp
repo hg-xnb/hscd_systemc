@@ -49,9 +49,18 @@ int sc_main(int argc, char* argv[]) {
 		mono_pulse(clk);
 
 		cout << "processing " << B <<   "\t -> Status: " << ((ul.read() == 1)?"UNLOCK\n":"LOCK\n");
+		if(ul.read() == 1){
+			mono_pulse(clk);
+			mono_pulse(clk);
+			rst.write(1); 
+			mono_pulse(clk);
+			rst.write(0);
+			mono_pulse(clk);
+			mono_pulse(clk);
+		}
 	}
 	mono_pulse(clk);
-	
+
 	cout << "Final status: " << ((ul.read() == 1)?"UNLOCK\n":"LOCK\n");
     cout << "\nFinished!\n";
     sc_close_vcd_trace_file(trace_file);
