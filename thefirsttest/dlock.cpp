@@ -20,7 +20,6 @@ int sc_main(int argc, char* argv[]) {
     sc_trace(trace_file, b1, "B1");
     sc_trace(trace_file, ul, "UNLOCK");
 
-    cout << "Start sim...\n";
 	auto mono_pulse = [=](sc_signal<bool> &pulse){
 		pulse.write(0);
 		sc_start(5, SC_NS);
@@ -28,6 +27,8 @@ int sc_main(int argc, char* argv[]) {
 		sc_start(5, SC_NS);
 		pulse.write(0);
 	};
+
+	cout << "Start sim...\n\n";
 
 	/// make reset state
 	b0.write(0);b1.write(0);
@@ -41,25 +42,13 @@ int sc_main(int argc, char* argv[]) {
 	cin >> PIN;
 
 	for(auto const& B:PIN){
-		if(B == '0'){
-			b0.write(1); b1.write(0);
-		}else{
-			b0.write(0); b1.write(1);
-		}
+		if(B == '0')
+			{b0.write(1); b1.write(0);}
+		else
+			{b0.write(0); b1.write(1);}
 		mono_pulse(clk);
-
 		cout << "processing " << B <<   "\t -> Status: " << ((ul.read() == 1)?"UNLOCK\n":"LOCK\n");
-		if(ul.read() == 1){
-			mono_pulse(clk);
-			mono_pulse(clk);
-			rst.write(1); 
-			mono_pulse(clk);
-			rst.write(0);
-			mono_pulse(clk);
-			mono_pulse(clk);
-		}
 	}
-	mono_pulse(clk);
 
 	cout << "Final status: " << ((ul.read() == 1)?"UNLOCK\n":"LOCK\n");
     cout << "\nFinished!\n";
