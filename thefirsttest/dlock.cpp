@@ -1,3 +1,5 @@
+/// why SC_THREAD? https://stackoverflow.com/questions/18646936/will-sc-thread-in-systemc-create-a-real-thread
+
 #include "dlock.h"
 #include "string"
 

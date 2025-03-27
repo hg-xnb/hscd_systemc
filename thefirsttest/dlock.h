@@ -14,11 +14,11 @@ SC_MODULE (DLOCK){
 	CLK("CLK"), RST("RST"), 
 	B0("B0"), B1("B1"), UNLOCK("UNLOCK")
 	{
-		SC_THREAD(main_thread);
+		SC_METHOD(main_action);
 		sensitive << CLK.pos();
 	}
 
-	void main_thread(void){
+	void main_action(void){
 		UNLOCK.write(false); 
 		state = 0x0;
 		while(true){
@@ -58,8 +58,7 @@ SC_MODULE (DLOCK){
 			}else{
 				/// do nothin'
 			}
-            wait_for_next_event:
-			wait();
+			// wait();
 		}
 	}
 
