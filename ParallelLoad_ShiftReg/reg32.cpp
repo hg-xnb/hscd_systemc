@@ -77,15 +77,23 @@ int sc_main(int argc, char* argv[]) {
 		}
 	
 	print("Shift left the row index...\n");
-		print("$ sh = ", SHIFT_LEFT);
-		sh.write(SHIFT_LEFT);
-		rep(i, 10){
-			print("$ input = ", 0b10011001*(i+7) %256);
-			input.write(0b10011001*(i+7));
-			mono_pulse(clk);
+	print("$ sh = ", SHIFT_LEFT);
+	sh.write(SHIFT_LEFT);
+	rep(i, 10){
+		print("$ input = ", 0b10011001*(i+7) %256);
+		input.write(0b10011001*(i+7));
+		mono_pulse(clk);
 			print("\t-> output = ", output.read(), '\n');
 		}
-
+		
+	print("Reload the input for right shifting...\n");
+		print("$ input = ", 0b10011001*(7) %256);
+		input.write(0b10011001*(7));
+		print(", sh = ", LOAD_INPUT);
+		sh.write(LOAD_INPUT);
+		mono_pulse(clk);
+		print("\t-> output = ", output.read(), '\n');
+		
 	print("Shift right the row index...\n");
 		print("$ sh = ", SHIFT_RIGHT);
 		sh.write(SHIFT_RIGHT);
