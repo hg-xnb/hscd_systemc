@@ -1,0 +1,553 @@
+$date
+     Apr 17, 2025       14:31:52
+$end
+
+$version
+ SystemC 3.0.2-Accellera --- Apr 10 2025 16:54:46
+$end
+
+$timescale
+     100 ps
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  clk       $end
+$var wire    1  aaaab  pe       $end
+$var wire    1  aaaac  ud       $end
+$var wire    1  aaaad  bd       $end
+$var wire    4  aaaae  p [3:0]  $end
+$var wire    4  aaaaf  q [3:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+0aaaaa
+0aaaab
+0aaaac
+0aaaad
+b1001 aaaae
+b0 aaaaf
+$end
+
+#50
+1aaaaa
+b1001 aaaaf
+
+#100
+0aaaaa
+
+#150
+1aaaab
+1aaaac
+1aaaad
+
+#200
+1aaaaa
+b1010 aaaaf
+
+#250
+0aaaaa
+
+#300
+1aaaaa
+b1011 aaaaf
+
+#350
+0aaaaa
+
+#400
+1aaaaa
+b1100 aaaaf
+
+#450
+0aaaaa
+
+#500
+1aaaaa
+b1101 aaaaf
+
+#550
+0aaaaa
+
+#600
+1aaaaa
+b1110 aaaaf
+
+#650
+0aaaaa
+
+#700
+1aaaaa
+b1111 aaaaf
+
+#750
+0aaaaa
+
+#800
+1aaaaa
+b0 aaaaf
+
+#850
+0aaaaa
+
+#900
+1aaaaa
+b1 aaaaf
+
+#950
+0aaaaa
+
+#1000
+1aaaaa
+b10 aaaaf
+
+#1050
+0aaaaa
+
+#1100
+1aaaaa
+b11 aaaaf
+
+#1150
+0aaaaa
+
+#1200
+1aaaaa
+b100 aaaaf
+
+#1250
+0aaaaa
+
+#1300
+1aaaaa
+b101 aaaaf
+
+#1350
+0aaaaa
+
+#1400
+1aaaaa
+b110 aaaaf
+
+#1450
+0aaaaa
+
+#1500
+1aaaaa
+b111 aaaaf
+
+#1550
+0aaaaa
+
+#1600
+1aaaaa
+b1000 aaaaf
+
+#1650
+0aaaaa
+
+#1700
+1aaaaa
+b1001 aaaaf
+
+#1750
+0aaaaa
+
+#1800
+1aaaaa
+b1010 aaaaf
+
+#1850
+0aaaaa
+
+#1900
+1aaaaa
+b1011 aaaaf
+
+#1950
+0aaaaa
+0aaaad
+
+#2000
+1aaaaa
+b0 aaaaf
+
+#2050
+0aaaaa
+
+#2100
+1aaaaa
+b1 aaaaf
+
+#2150
+0aaaaa
+
+#2200
+1aaaaa
+b10 aaaaf
+
+#2250
+0aaaaa
+
+#2300
+1aaaaa
+b11 aaaaf
+
+#2350
+0aaaaa
+
+#2400
+1aaaaa
+b100 aaaaf
+
+#2450
+0aaaaa
+
+#2500
+1aaaaa
+b101 aaaaf
+
+#2550
+0aaaaa
+
+#2600
+1aaaaa
+b110 aaaaf
+
+#2650
+0aaaaa
+
+#2700
+1aaaaa
+b111 aaaaf
+
+#2750
+0aaaaa
+
+#2800
+1aaaaa
+b1000 aaaaf
+
+#2850
+0aaaaa
+
+#2900
+1aaaaa
+b1001 aaaaf
+
+#2950
+0aaaaa
+
+#3000
+1aaaaa
+b0 aaaaf
+
+#3050
+0aaaaa
+
+#3100
+1aaaaa
+b1 aaaaf
+
+#3150
+0aaaaa
+
+#3200
+1aaaaa
+b10 aaaaf
+
+#3250
+0aaaaa
+
+#3300
+1aaaaa
+b11 aaaaf
+
+#3350
+0aaaaa
+
+#3400
+1aaaaa
+b100 aaaaf
+
+#3450
+0aaaaa
+
+#3500
+1aaaaa
+b101 aaaaf
+
+#3550
+0aaaaa
+
+#3600
+1aaaaa
+b110 aaaaf
+
+#3650
+0aaaaa
+
+#3700
+1aaaaa
+b111 aaaaf
+
+#3750
+0aaaaa
+0aaaac
+1aaaad
+
+#3800
+1aaaaa
+b110 aaaaf
+
+#3850
+0aaaaa
+
+#3900
+1aaaaa
+b101 aaaaf
+
+#3950
+0aaaaa
+
+#4000
+1aaaaa
+b100 aaaaf
+
+#4050
+0aaaaa
+
+#4100
+1aaaaa
+b11 aaaaf
+
+#4150
+0aaaaa
+
+#4200
+1aaaaa
+b10 aaaaf
+
+#4250
+0aaaaa
+
+#4300
+1aaaaa
+b1 aaaaf
+
+#4350
+0aaaaa
+
+#4400
+1aaaaa
+b0 aaaaf
+
+#4450
+0aaaaa
+
+#4500
+1aaaaa
+b1111 aaaaf
+
+#4550
+0aaaaa
+
+#4600
+1aaaaa
+b1110 aaaaf
+
+#4650
+0aaaaa
+
+#4700
+1aaaaa
+b1101 aaaaf
+
+#4750
+0aaaaa
+
+#4800
+1aaaaa
+b1100 aaaaf
+
+#4850
+0aaaaa
+
+#4900
+1aaaaa
+b1011 aaaaf
+
+#4950
+0aaaaa
+
+#5000
+1aaaaa
+b1010 aaaaf
+
+#5050
+0aaaaa
+
+#5100
+1aaaaa
+b1001 aaaaf
+
+#5150
+0aaaaa
+
+#5200
+1aaaaa
+b1000 aaaaf
+
+#5250
+0aaaaa
+
+#5300
+1aaaaa
+b111 aaaaf
+
+#5350
+0aaaaa
+
+#5400
+1aaaaa
+b110 aaaaf
+
+#5450
+0aaaaa
+
+#5500
+1aaaaa
+b101 aaaaf
+
+#5550
+0aaaaa
+0aaaad
+
+#5600
+1aaaaa
+b100 aaaaf
+
+#5650
+0aaaaa
+
+#5700
+1aaaaa
+b11 aaaaf
+
+#5750
+0aaaaa
+
+#5800
+1aaaaa
+b10 aaaaf
+
+#5850
+0aaaaa
+
+#5900
+1aaaaa
+b1 aaaaf
+
+#5950
+0aaaaa
+
+#6000
+1aaaaa
+b0 aaaaf
+
+#6050
+0aaaaa
+
+#6100
+1aaaaa
+b1001 aaaaf
+
+#6150
+0aaaaa
+
+#6200
+1aaaaa
+b1000 aaaaf
+
+#6250
+0aaaaa
+
+#6300
+1aaaaa
+b111 aaaaf
+
+#6350
+0aaaaa
+
+#6400
+1aaaaa
+b110 aaaaf
+
+#6450
+0aaaaa
+
+#6500
+1aaaaa
+b101 aaaaf
+
+#6550
+0aaaaa
+
+#6600
+1aaaaa
+b100 aaaaf
+
+#6650
+0aaaaa
+
+#6700
+1aaaaa
+b11 aaaaf
+
+#6750
+0aaaaa
+
+#6800
+1aaaaa
+b10 aaaaf
+
+#6850
+0aaaaa
+
+#6900
+1aaaaa
+b1 aaaaf
+
+#6950
+0aaaaa
+
+#7000
+1aaaaa
+b0 aaaaf
+
+#7050
+0aaaaa
+
+#7100
+1aaaaa
+b1001 aaaaf
+
+#7150
+0aaaaa
+
+#7200
+1aaaaa
+b1000 aaaaf
+
+#7250
+0aaaaa
+
+#7300
+1aaaaa
+b111 aaaaf
+
+#7350

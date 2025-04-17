@@ -5,6 +5,7 @@
         "systemc": "cpp",
         "*.tcc": "cpp",
         "format": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }
