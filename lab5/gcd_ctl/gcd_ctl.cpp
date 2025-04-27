@@ -116,7 +116,7 @@ int sc_main(int argc, char *argv[]) {
     X_LT_Y.write(1);
     X_GT_Y.write(0);
     X_EQ_Y.write(0);
-    sc_start(20, SC_NS);
+    sc_start(80, SC_NS);
     print_outputs(REG_X_SEL, REG_X_CLK, REG_X_LOAD, REG_X_RESET,
                   REG_Y_SEL, REG_Y_CLK, REG_Y_LOAD, REG_Y_RESET,
                   REG_O_SEL, REG_O_CLK, REG_O_LOAD, REG_O_RESET,
@@ -127,7 +127,7 @@ int sc_main(int argc, char *argv[]) {
     X_LT_Y.write(0);
     X_GT_Y.write(1);
     X_EQ_Y.write(0);
-    sc_start(20, SC_NS);
+    sc_start(80, SC_NS);
     print_outputs(REG_X_SEL, REG_X_CLK, REG_X_LOAD, REG_X_RESET,
                   REG_Y_SEL, REG_Y_CLK, REG_Y_LOAD, REG_Y_RESET,
                   REG_O_SEL, REG_O_CLK, REG_O_LOAD, REG_O_RESET,
@@ -138,7 +138,7 @@ int sc_main(int argc, char *argv[]) {
     X_LT_Y.write(0);
     X_GT_Y.write(0);
     X_EQ_Y.write(1);
-    sc_start(20, SC_NS);
+    sc_start(80, SC_NS);
     print_outputs(REG_X_SEL, REG_X_CLK, REG_X_LOAD, REG_X_RESET,
                   REG_Y_SEL, REG_Y_CLK, REG_Y_LOAD, REG_Y_RESET,
                   REG_O_SEL, REG_O_CLK, REG_O_LOAD, REG_O_RESET,
@@ -149,7 +149,7 @@ int sc_main(int argc, char *argv[]) {
     X_LT_Y.write(0);
     X_GT_Y.write(0);
     X_EQ_Y.write(0);
-    sc_start(20, SC_NS);
+    sc_start(80, SC_NS);
     print_outputs(REG_X_SEL, REG_X_CLK, REG_X_LOAD, REG_X_RESET,
                   REG_Y_SEL, REG_Y_CLK, REG_Y_LOAD, REG_Y_RESET,
                   REG_O_SEL, REG_O_CLK, REG_O_LOAD, REG_O_RESET,

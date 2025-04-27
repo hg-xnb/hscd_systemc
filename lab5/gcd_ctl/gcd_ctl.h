@@ -6,15 +6,10 @@
 #define LOW 0x0
 #define HIGH 0x1
 #define MAX_CYCLE_COUNT 0x11
+#define WIDTH 4
+
 SC_MODULE(GCD_CTL)
 {
-    /// states
-    enum State
-    {
-        IDLE,
-        BUSY,
-        DONE
-    };
     enum RegSelection
     {
         FROM_INPUT,
@@ -53,7 +48,6 @@ SC_MODULE(GCD_CTL)
     sc_out<bool> X_SELF_SUBTRACTION, Y_SELF_SUBTRACTION;
 
     /// Internal state
-    sc_signal<State> state;
     sc_uint<WIDTH+1> _cycle_count;
     
     void resetState()
@@ -187,7 +181,6 @@ SC_MODULE(GCD_CTL)
                        Y_SELF_SUBTRACTION("Y_SELF_SUBTRACTION")
     {
         SC_CTHREAD(process, CLK.pos());
-        state.write(IDLE); // initial state
     }
 };
 

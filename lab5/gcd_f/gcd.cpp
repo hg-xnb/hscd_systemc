@@ -43,17 +43,7 @@ int sc_main(int argc, char *argv[])
 	sc_signal<sc_uint<WIDTH>> y("y");
 	sc_signal<sc_uint<WIDTH>> out("out");
 	sc_signal<bool> done("done");
-	sc_signal<bool> _X_LT_Y("_X_LT_Y"), _X_GT_Y("_X_GT_Y"),
-		_X_EQ_Y("_X_EQ_Y"),
-		_REG_X_SEL("_REG_X_SEL"), _REG_X_CLK("_REG_X_CLK"),
-		_REG_X_LOAD("_REG_X_LOAD"), _REG_X_RESET("_REG_X_RESET"),
-		_REG_Y_SEL("_REG_Y_SEL"), _REG_Y_CLK("_REG_Y_CLK"),
-		_REG_Y_LOAD("_REG_Y_LOAD"), _REG_Y_RESET("_REG_Y_RESET"),
-		_REG_O_SEL("_REG_O_SEL"), _REG_O_CLK("_REG_O_CLK"),
-		_REG_O_LOAD("_REG_O_LOAD"), _REG_O_RESET("_REG_O_RESET"),
-		_X_SELF_SUBTRACTION("_X_SELF_SUBTRACTION"), _Y_SELF_SUBTRACTION("_Y_SELF_SUBTRACTION");
-	sc_signal<sc_uint<WIDTH>> _internalX("_internalX"),
-		_internalY("_internalY");
+
 
 	GCD gcd("gcd");
 	gcd.CLK(clk);
@@ -62,26 +52,6 @@ int sc_main(int argc, char *argv[])
 	gcd.Y(y);
 	gcd.OUT(out);
 	gcd.DONE(done);
-	/// for debug
-	gcd._X_LT_Y(_X_LT_Y);
-	gcd._X_GT_Y(_X_GT_Y);
-	gcd._X_EQ_Y(_X_EQ_Y);
-	gcd._REG_X_SEL(_REG_X_SEL);
-	gcd._REG_X_CLK(_REG_X_CLK);
-	gcd._REG_X_LOAD(_REG_X_LOAD);
-	gcd._REG_X_RESET(_REG_X_RESET);
-	gcd._REG_Y_SEL(_REG_Y_SEL);
-	gcd._REG_Y_CLK(_REG_Y_CLK);
-	gcd._REG_Y_LOAD(_REG_Y_LOAD);
-	gcd._REG_Y_RESET(_REG_Y_RESET);
-	gcd._REG_O_SEL(_REG_O_SEL);
-	gcd._REG_O_CLK(_REG_O_CLK);
-	gcd._REG_O_LOAD(_REG_O_LOAD);
-	gcd._REG_O_RESET(_REG_O_RESET);
-	gcd._X_SELF_SUBTRACTION(_X_SELF_SUBTRACTION);
-	gcd._Y_SELF_SUBTRACTION(_Y_SELF_SUBTRACTION);
-	gcd._internalX(_internalX);
-	gcd._internalY(_internalY);
 
 	sc_trace_file *trace_file = sc_create_vcd_trace_file("wavetrace_output");
 	trace_file->set_time_unit(1, SC_NS);
@@ -92,26 +62,6 @@ int sc_main(int argc, char *argv[])
 	sc_set_trace(y);
 	sc_set_trace(out);
 	sc_set_trace(done);
-
-	sc_set_trace(_X_LT_Y);
-	sc_set_trace(_X_GT_Y);
-	sc_set_trace(_X_EQ_Y);
-	sc_set_trace(_REG_X_SEL);
-	sc_set_trace(_REG_X_CLK);
-	sc_set_trace(_REG_X_LOAD);
-	sc_set_trace(_REG_X_RESET);
-	sc_set_trace(_REG_Y_SEL);
-	sc_set_trace(_REG_Y_CLK);
-	sc_set_trace(_REG_Y_LOAD);
-	sc_set_trace(_REG_Y_RESET);
-	sc_set_trace(_REG_O_SEL);
-	sc_set_trace(_REG_O_CLK);
-	sc_set_trace(_REG_O_LOAD);
-	sc_set_trace(_REG_O_RESET);
-	sc_set_trace(_X_SELF_SUBTRACTION);
-	sc_set_trace(_Y_SELF_SUBTRACTION);
-	sc_set_trace(_internalX);
-	sc_set_trace(_internalY);
 
 	cout << "Start GCD simulation...\n";
 

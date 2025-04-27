@@ -1,5 +1,5 @@
 $date
-     Apr 27, 2025       17:23:07
+     Apr 27, 2025       17:36:11
 $end
 
 $version
@@ -17,25 +17,6 @@ $var wire    4  aaaac  x [3:0]  $end
 $var wire    4  aaaad  y [3:0]  $end
 $var wire    4  aaaae  out [3:0]  $end
 $var wire    1  aaaaf  done       $end
-$var wire    1  aaaag  _X_LT_Y       $end
-$var wire    1  aaaah  _X_GT_Y       $end
-$var wire    1  aaaai  _X_EQ_Y       $end
-$var wire    1  aaaaj  _REG_X_SEL       $end
-$var wire    1  aaaak  _REG_X_CLK       $end
-$var wire    1  aaaal  _REG_X_LOAD       $end
-$var wire    1  aaaam  _REG_X_RESET       $end
-$var wire    1  aaaan  _REG_Y_SEL       $end
-$var wire    1  aaaao  _REG_Y_CLK       $end
-$var wire    1  aaaap  _REG_Y_LOAD       $end
-$var wire    1  aaaaq  _REG_Y_RESET       $end
-$var wire    1  aaaar  _REG_O_SEL       $end
-$var wire    1  aaaas  _REG_O_CLK       $end
-$var wire    1  aaaat  _REG_O_LOAD       $end
-$var wire    1  aaaau  _REG_O_RESET       $end
-$var wire    1  aaaav  _X_SELF_SUBTRACTION       $end
-$var wire    1  aaaaw  _Y_SELF_SUBTRACTION       $end
-$var wire    4  aaaax  _internalX [3:0]  $end
-$var wire    4  aaaay  _internalY [3:0]  $end
 $upscope $end
 $enddefinitions  $end
 
@@ -50,25 +31,6 @@ b0 aaaac
 b0 aaaad
 b0 aaaae
 0aaaaf
-0aaaag
-0aaaah
-1aaaai
-0aaaaj
-0aaaak
-0aaaal
-0aaaam
-0aaaan
-0aaaao
-0aaaap
-0aaaaq
-0aaaar
-0aaaas
-0aaaat
-0aaaau
-0aaaav
-0aaaaw
-b0 aaaax
-b0 aaaay
 $end
 
 #10
@@ -77,8 +39,6 @@ b10 aaaad
 
 #15
 1aaaaa
-1aaaam
-1aaaaq
 
 #20
 0aaaaa
@@ -114,74 +74,42 @@ b100 aaaad
 
 #75
 1aaaaa
-1aaaah
-0aaaai
-1aaaak
-1aaaal
-0aaaam
-1aaaao
-1aaaap
-0aaaaq
-b1100 aaaax
-b100 aaaay
 
 #80
 0aaaaa
 
 #85
 1aaaaa
-1aaaaj
-0aaaak
-0aaaal
-1aaaan
-0aaaao
-0aaaap
-1aaaav
 
 #90
 0aaaaa
 
 #95
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
-b1000 aaaax
 
 #100
 0aaaaa
 
 #105
 1aaaaa
-0aaaak
-0aaaal
 
 #110
 0aaaaa
 
 #115
 1aaaaa
-1aaaav
 
 #120
 0aaaaa
 
 #125
 1aaaaa
-0aaaah
-1aaaai
-1aaaak
-1aaaal
-0aaaav
-b100 aaaax
 
 #130
 0aaaaa
 
 #135
 1aaaaa
-0aaaak
-0aaaal
 
 #140
 0aaaaa
@@ -190,10 +118,6 @@ b100 aaaax
 1aaaaa
 b100 aaaae
 1aaaaf
-0aaaaj
-0aaaan
-1aaaas
-1aaaat
 
 #150
 0aaaaa
@@ -201,8 +125,6 @@ b100 aaaae
 #155
 1aaaaa
 0aaaaf
-0aaaas
-0aaaat
 
 #160
 0aaaaa
@@ -211,72 +133,42 @@ b11 aaaad
 
 #165
 1aaaaa
-1aaaah
-0aaaai
-1aaaak
-1aaaal
-1aaaao
-1aaaap
-b1001 aaaax
-b11 aaaay
 
 #170
 0aaaaa
 
 #175
 1aaaaa
-1aaaaj
-0aaaak
-0aaaal
-1aaaan
-0aaaao
-0aaaap
-1aaaav
 
 #180
 0aaaaa
 
 #185
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
-b110 aaaax
 
 #190
 0aaaaa
 
 #195
 1aaaaa
-0aaaak
-0aaaal
 
 #200
 0aaaaa
 
 #205
 1aaaaa
-1aaaav
 
 #210
 0aaaaa
 
 #215
 1aaaaa
-0aaaah
-1aaaai
-1aaaak
-1aaaal
-0aaaav
-b11 aaaax
 
 #220
 0aaaaa
 
 #225
 1aaaaa
-0aaaak
-0aaaal
 
 #230
 0aaaaa
@@ -285,10 +177,6 @@ b11 aaaax
 1aaaaa
 b11 aaaae
 1aaaaf
-0aaaaj
-0aaaan
-1aaaas
-1aaaat
 
 #240
 0aaaaa
@@ -296,8 +184,6 @@ b11 aaaae
 #245
 1aaaaa
 0aaaaf
-0aaaas
-0aaaat
 
 #250
 0aaaaa
@@ -306,173 +192,114 @@ b1101 aaaad
 
 #255
 1aaaaa
-1aaaag
-0aaaai
-1aaaak
-1aaaal
-1aaaao
-1aaaap
-b1101 aaaay
 
 #260
 0aaaaa
 
 #265
 1aaaaa
-1aaaaj
-0aaaak
-0aaaal
-1aaaan
-0aaaao
-0aaaap
-1aaaaw
 
 #270
 0aaaaa
 
 #275
 1aaaaa
-1aaaao
-1aaaap
-0aaaaw
-b1010 aaaay
 
 #280
 0aaaaa
 
 #285
 1aaaaa
-0aaaao
-0aaaap
 
 #290
 0aaaaa
 
 #295
 1aaaaa
-1aaaaw
 
 #300
 0aaaaa
 
 #305
 1aaaaa
-1aaaao
-1aaaap
-0aaaaw
-b111 aaaay
 
 #310
 0aaaaa
 
 #315
 1aaaaa
-0aaaao
-0aaaap
 
 #320
 0aaaaa
 
 #325
 1aaaaa
-1aaaaw
 
 #330
 0aaaaa
 
 #335
 1aaaaa
-1aaaao
-1aaaap
-0aaaaw
-b100 aaaay
 
 #340
 0aaaaa
 
 #345
 1aaaaa
-0aaaao
-0aaaap
 
 #350
 0aaaaa
 
 #355
 1aaaaa
-1aaaaw
 
 #360
 0aaaaa
 
 #365
 1aaaaa
-0aaaag
-1aaaah
-1aaaao
-1aaaap
-0aaaaw
-b1 aaaay
 
 #370
 0aaaaa
 
 #375
 1aaaaa
-0aaaao
-0aaaap
 
 #380
 0aaaaa
 
 #385
 1aaaaa
-1aaaav
 
 #390
 0aaaaa
 
 #395
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
-b10 aaaax
 
 #400
 0aaaaa
 
 #405
 1aaaaa
-0aaaak
-0aaaal
 
 #410
 0aaaaa
 
 #415
 1aaaaa
-1aaaav
 
 #420
 0aaaaa
 
 #425
 1aaaaa
-0aaaah
-1aaaai
-1aaaak
-1aaaal
-0aaaav
-b1 aaaax
 
 #430
 0aaaaa
 
 #435
 1aaaaa
-0aaaak
-0aaaal
 
 #440
 0aaaaa
@@ -481,10 +308,6 @@ b1 aaaax
 1aaaaa
 b1 aaaae
 1aaaaf
-0aaaaj
-0aaaan
-1aaaas
-1aaaat
 
 #450
 0aaaaa
@@ -492,8 +315,6 @@ b1 aaaae
 #455
 1aaaaa
 0aaaaf
-0aaaas
-0aaaat
 
 #460
 0aaaaa
@@ -502,390 +323,282 @@ b0 aaaad
 
 #465
 1aaaaa
-1aaaah
-0aaaai
-1aaaak
-1aaaal
-1aaaao
-1aaaap
-b111 aaaax
-b0 aaaay
 
 #470
 0aaaaa
 
 #475
 1aaaaa
-1aaaaj
-0aaaak
-0aaaal
-1aaaan
-0aaaao
-0aaaap
-1aaaav
 
 #480
 0aaaaa
 
 #485
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #490
 0aaaaa
 
 #495
 1aaaaa
-0aaaak
-0aaaal
 
 #500
 0aaaaa
 
 #505
 1aaaaa
-1aaaav
 
 #510
 0aaaaa
 
 #515
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #520
 0aaaaa
 
 #525
 1aaaaa
-0aaaak
-0aaaal
 
 #530
 0aaaaa
 
 #535
 1aaaaa
-1aaaav
 
 #540
 0aaaaa
 
 #545
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #550
 0aaaaa
 
 #555
 1aaaaa
-0aaaak
-0aaaal
 
 #560
 0aaaaa
 
 #565
 1aaaaa
-1aaaav
 
 #570
 0aaaaa
 
 #575
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #580
 0aaaaa
 
 #585
 1aaaaa
-0aaaak
-0aaaal
 
 #590
 0aaaaa
 
 #595
 1aaaaa
-1aaaav
 
 #600
 0aaaaa
 
 #605
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #610
 0aaaaa
 
 #615
 1aaaaa
-0aaaak
-0aaaal
 
 #620
 0aaaaa
 
 #625
 1aaaaa
-1aaaav
 
 #630
 0aaaaa
 
 #635
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #640
 0aaaaa
 
 #645
 1aaaaa
-0aaaak
-0aaaal
 
 #650
 0aaaaa
 
 #655
 1aaaaa
-1aaaav
 
 #660
 0aaaaa
 
 #665
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #670
 0aaaaa
 
 #675
 1aaaaa
-0aaaak
-0aaaal
 
 #680
 0aaaaa
 
 #685
 1aaaaa
-1aaaav
 
 #690
 0aaaaa
 
 #695
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #700
 0aaaaa
 
 #705
 1aaaaa
-0aaaak
-0aaaal
 
 #710
 0aaaaa
 
 #715
 1aaaaa
-1aaaav
 
 #720
 0aaaaa
 
 #725
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #730
 0aaaaa
 
 #735
 1aaaaa
-0aaaak
-0aaaal
 
 #740
 0aaaaa
 
 #745
 1aaaaa
-1aaaav
 
 #750
 0aaaaa
 
 #755
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #760
 0aaaaa
 
 #765
 1aaaaa
-0aaaak
-0aaaal
 
 #770
 0aaaaa
 
 #775
 1aaaaa
-1aaaav
 
 #780
 0aaaaa
 
 #785
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #790
 0aaaaa
 
 #795
 1aaaaa
-0aaaak
-0aaaal
 
 #800
 0aaaaa
 
 #805
 1aaaaa
-1aaaav
 
 #810
 0aaaaa
 
 #815
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #820
 0aaaaa
 
 #825
 1aaaaa
-0aaaak
-0aaaal
 
 #830
 0aaaaa
 
 #835
 1aaaaa
-1aaaav
 
 #840
 0aaaaa
 
 #845
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #850
 0aaaaa
 
 #855
 1aaaaa
-0aaaak
-0aaaal
 
 #860
 0aaaaa
 
 #865
 1aaaaa
-1aaaav
 
 #870
 0aaaaa
 
 #875
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #880
 0aaaaa
 
 #885
 1aaaaa
-0aaaak
-0aaaal
 
 #890
 0aaaaa
 
 #895
 1aaaaa
-1aaaav
 
 #900
 0aaaaa
 
 #905
 1aaaaa
-1aaaak
-1aaaal
-0aaaav
 
 #910
 0aaaaa
 
 #915
 1aaaaa
-0aaaak
-0aaaal
 
 #920
 0aaaaa
 
 #925
 1aaaaa
-0aaaaj
-1aaaam
-0aaaan
-1aaaaq
 
 #930
 0aaaaa
@@ -894,8 +607,6 @@ b0 aaaay
 1aaaaa
 b0 aaaae
 1aaaaf
-1aaaas
-1aaaat
 
 #940
 0aaaaa
@@ -903,8 +614,6 @@ b0 aaaae
 #945
 1aaaaa
 0aaaaf
-0aaaas
-0aaaat
 
 #950
 0aaaaa
@@ -913,16 +622,6 @@ b101 aaaad
 
 #955
 1aaaaa
-0aaaah
-1aaaai
-1aaaak
-1aaaal
-0aaaam
-1aaaao
-1aaaap
-0aaaaq
-b101 aaaax
-b101 aaaay
 
 #960
 0aaaaa
@@ -931,12 +630,6 @@ b101 aaaay
 1aaaaa
 b101 aaaae
 1aaaaf
-0aaaak
-0aaaal
-0aaaao
-0aaaap
-1aaaas
-1aaaat
 
 #970
 0aaaaa
@@ -944,7 +637,5 @@ b101 aaaae
 #975
 1aaaaa
 0aaaaf
-0aaaas
-0aaaat
 
 #980
