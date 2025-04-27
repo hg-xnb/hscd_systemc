@@ -17,7 +17,6 @@ SC_MODULE(REG4B){
 
     void main_thread(){
         while(true){
-            wait();
             if(RESET.read()){
                 OUT.write(0);
             } else 
@@ -25,6 +24,7 @@ SC_MODULE(REG4B){
                     _reg = IN.read();
                 }
             OUT.write(_reg);
+            wait();
         }
     }
 
@@ -33,7 +33,8 @@ SC_MODULE(REG4B){
         CLK("CLK"),
         RESET("RESET"),
         LOAD("LOAD"),
-        OUT("OUT"){
+        OUT("OUT")
+    {
         SC_CTHREAD(main_thread, CLK.pos());
     }
 

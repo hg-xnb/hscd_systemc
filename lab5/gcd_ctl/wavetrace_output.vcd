@@ -1,0 +1,128 @@
+$date
+     Apr 27, 2025       02:07:11
+$end
+
+$version
+ SystemC 3.0.2-Accellera --- Apr 10 2025 16:54:46
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  CLK       $end
+$var wire    1  aaaab  EN       $end
+$var wire    1  aaaac  X_LT_Y       $end
+$var wire    1  aaaad  X_GT_Y       $end
+$var wire    1  aaaae  X_EQ_Y       $end
+$var wire    1  aaaaf  REG_X_SEL       $end
+$var wire    1  aaaag  REG_X_CLK       $end
+$var wire    1  aaaah  REG_X_LOAD       $end
+$var wire    1  aaaai  REG_X_RESET       $end
+$var wire    1  aaaaj  REG_Y_SEL       $end
+$var wire    1  aaaak  REG_Y_CLK       $end
+$var wire    1  aaaal  REG_Y_LOAD       $end
+$var wire    1  aaaam  REG_Y_RESET       $end
+$var wire    1  aaaan  REG_O_SEL       $end
+$var wire    1  aaaao  REG_O_CLK       $end
+$var wire    1  aaaap  REG_O_LOAD       $end
+$var wire    1  aaaaq  REG_O_RESET       $end
+$var wire    1  aaaar  X_SELF_SUBTRACTION       $end
+$var wire    1  aaaas  Y_SELF_SUBTRACTION       $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+1aaaaa
+1aaaab
+1aaaac
+0aaaad
+0aaaae
+0aaaaf
+0aaaag
+0aaaah
+0aaaai
+0aaaaj
+0aaaak
+0aaaal
+0aaaam
+0aaaan
+0aaaao
+0aaaap
+0aaaaq
+0aaaar
+0aaaas
+$end
+
+#5
+0aaaaa
+
+#10
+1aaaaa
+1aaaag
+1aaaah
+1aaaak
+1aaaal
+
+#15
+0aaaaa
+
+#20
+1aaaaa
+0aaaac
+1aaaad
+1aaaaf
+0aaaag
+0aaaah
+1aaaaj
+0aaaak
+0aaaal
+
+#25
+0aaaaa
+
+#30
+1aaaaa
+1aaaar
+
+#35
+0aaaaa
+
+#40
+1aaaaa
+0aaaad
+1aaaae
+1aaaag
+1aaaah
+
+#45
+0aaaaa
+
+#50
+1aaaaa
+0aaaag
+0aaaah
+0aaaar
+
+#55
+0aaaaa
+
+#60
+1aaaaa
+0aaaae
+
+#65
+0aaaaa
+
+#70
+1aaaaa
+
+#75
+0aaaaa
+
+#80

@@ -17,11 +17,10 @@
 #ifndef _mono_pulse
 	#define _mono_pulse
 	void mono_pulse(sc_signal<bool> &pulse){
-		pulse.write(0);
-		sc_start(5, SC_NS);
 		pulse.write(1);
 		sc_start(5, SC_NS);
 		pulse.write(0);
+		sc_start(5, SC_NS);
 	};
 #endif
 

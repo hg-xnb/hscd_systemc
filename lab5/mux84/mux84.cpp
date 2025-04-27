@@ -33,7 +33,7 @@ int sc_main(int argc, char* argv[]) {
 	sc_signal<bool> sel("sel");
 	sc_signal<sc_uint<4>> out("out");
 	
-	mux84 mux("mux");
+	MUX84 mux("mux");
 	mux.IN0(in0);
 	mux.IN1(in1);
 	mux.SEL(sel);

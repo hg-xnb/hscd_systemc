@@ -13,13 +13,11 @@ SC_MODULE(SUB4B){
 
     void process() {
         while (true) {
-            wait();
-            if (CLK.read()) {
-                auto x = X.read();
-                auto y = Y.read();
-                _reg = (x > y) ? (x - y) : (y - x);
-            }
+            auto x = X.read();
+            auto y = Y.read();
+            _reg = (x > y) ? (x - y) : (y - x);
             OUT.write(_reg);
+            wait();
         }
     }
 
