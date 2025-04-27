@@ -51,6 +51,9 @@ SC_MODULE(GCD)
 
     void copySignal(){
         DONE.write(REG_O_LOAD.read());
+    };
+
+    void copySignalForDebug(){
         _X_LT_Y.write(X_LT_Y.read());
         _X_GT_Y.write(X_GT_Y.read());
         _X_EQ_Y.write(X_EQ_Y.read());
@@ -161,7 +164,10 @@ SC_MODULE(GCD)
         gcd_ctl->Y_SELF_SUBTRACTION(Y_SELF_SUBTRACTION);
 
         SC_METHOD(copySignal);
-        sensitive << CLK << X << Y << EN << DONE
+        sensitive << CLK << X << Y << EN << REG_O_LOAD;
+
+        SC_METHOD(copySignalForDebug);
+        sensitive 
         << _X_EQ_Y << _X_GT_Y << _X_LT_Y
         << _REG_X_SEL << _REG_X_CLK << _REG_X_LOAD << _REG_X_RESET
         << _REG_Y_SEL << _REG_Y_CLK << _REG_Y_LOAD << _REG_Y_RESET

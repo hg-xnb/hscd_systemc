@@ -134,7 +134,7 @@ int sc_main(int argc, char *argv[])
 	sc_start(10, SC_NS);
 
 	// Wait for DONE signal
-	print("\Start sim...\n");
+	print("\nStart sim...\n");
 
 	sc_sim_set(x, 12);
 	sc_sim_set(y, 4);
