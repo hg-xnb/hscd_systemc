@@ -1,0 +1,742 @@
+$date
+     May 14, 2025       01:57:05
+$end
+
+$version
+ SystemC 3.0.2-Accellera --- Apr 10 2025 16:54:46
+$end
+
+$timescale
+     1 ns
+$end
+
+$scope module SystemC $end
+$var wire    1  aaaaa  rst       $end
+$var wire    4  aaaab  a [3:0]  $end
+$var wire    4  aaaac  b [3:0]  $end
+$var wire    4  aaaad  select [3:0]  $end
+$var wire    1  aaaae  fs_rst       $end
+$var wire    1  aaaaf  fa_rst       $end
+$var wire    1  aaaag  and_rst       $end
+$var wire    1  aaaah  nand_rst       $end
+$var wire    1  aaaai  or_rst       $end
+$var wire    1  aaaaj  xor_rst       $end
+$var wire    1  aaaak  fs_en       $end
+$var wire    1  aaaal  fa_en       $end
+$var wire    1  aaaam  and_en       $end
+$var wire    1  aaaan  nand_en       $end
+$var wire    1  aaaao  or_en       $end
+$var wire    1  aaaap  xor_en       $end
+$var wire    1  aaaaq  out_mux_en       $end
+$var wire    1  aaaar  fs_b_in       $end
+$var wire    1  aaaas  fa_c_in       $end
+$var wire    4  aaaat  fs_a [3:0]  $end
+$var wire    4  aaaau  fa_a [3:0]  $end
+$var wire    4  aaaav  and_a [3:0]  $end
+$var wire    4  aaaaw  nand_a [3:0]  $end
+$var wire    4  aaaax  or_a [3:0]  $end
+$var wire    4  aaaay  xor_a [3:0]  $end
+$var wire    4  aaaaz  fs_b [3:0]  $end
+$var wire    4  aaaba  fa_b [3:0]  $end
+$var wire    4  aaabb  and_b [3:0]  $end
+$var wire    4  aaabc  nand_b [3:0]  $end
+$var wire    4  aaabd  or_b [3:0]  $end
+$var wire    4  aaabe  xor_b [3:0]  $end
+$var wire    3  aaabf  out_mux_sel [2:0]  $end
+$var wire    1  aaabg  en       $end
+$var wire    4  aaabh  fa_out [3:0]  $end
+$var wire    1  aaabi  fa_carry_out       $end
+$var wire    4  aaabj  fs_out [3:0]  $end
+$var wire    1  aaabk  fs_borrow_out       $end
+$var wire    4  aaabl  and_out [3:0]  $end
+$var wire    4  aaabm  nand_out [3:0]  $end
+$var wire    4  aaabn  or_out [3:0]  $end
+$var wire    4  aaabo  xor_out [3:0]  $end
+$upscope $end
+$enddefinitions  $end
+
+$comment
+All initial values are dumped below at time 0 sec = 0 timescale units.
+$end
+
+$dumpvars
+0aaaaa
+b0 aaaab
+b0 aaaac
+b0 aaaad
+0aaaae
+0aaaaf
+0aaaag
+0aaaah
+0aaaai
+0aaaaj
+0aaaak
+0aaaal
+0aaaam
+0aaaan
+0aaaao
+0aaaap
+0aaaaq
+0aaaar
+0aaaas
+b0 aaaat
+b0 aaaau
+b0 aaaav
+b0 aaaaw
+b0 aaaax
+b0 aaaay
+b0 aaaaz
+b0 aaaba
+b0 aaabb
+b0 aaabc
+b0 aaabd
+b0 aaabe
+b0 aaabf
+0aaabg
+b0 aaabh
+0aaabi
+b0 aaabj
+0aaabk
+b0 aaabl
+b0 aaabm
+b0 aaabn
+b0 aaabo
+$end
+
+#10
+b1111 aaaab
+b11 aaaac
+
+#15
+1aaaal
+b1111 aaaau
+1aaabg
+
+#20
+b11 aaaab
+b0 aaaac
+0aaabg
+
+#25
+b11 aaaau
+1aaabg
+
+#30
+b110 aaaab
+b10 aaaac
+0aaabg
+
+#35
+b110 aaaau
+1aaabg
+
+#40
+b1101 aaaab
+b1111 aaaac
+0aaabg
+
+#45
+b1101 aaaau
+1aaabg
+
+#50
+b1000 aaaac
+0aaabg
+
+#55
+1aaabg
+
+#60
+b1011 aaaab
+b1100 aaaac
+b1 aaaad
+0aaabg
+
+#65
+1aaaas
+b1011 aaaau
+1aaabg
+
+#70
+b110 aaaab
+b100 aaaac
+0aaabg
+
+#75
+b110 aaaau
+1aaabg
+
+#80
+b11 aaaab
+b11 aaaac
+0aaabg
+
+#85
+b11 aaaau
+1aaabg
+
+#90
+b101 aaaab
+b110 aaaac
+0aaabg
+
+#95
+b101 aaaau
+1aaabg
+
+#100
+b10 aaaab
+b1111 aaaac
+0aaabg
+
+#105
+b10 aaaau
+1aaabg
+
+#110
+b1110 aaaab
+b1101 aaaac
+b10 aaaad
+0aaabg
+
+#115
+0aaaas
+b1110 aaaau
+b1101 aaaba
+1aaabg
+
+#120
+b1100 aaaab
+b1000 aaaac
+0aaabg
+
+#125
+b1100 aaaau
+b1000 aaaba
+1aaabg
+
+#130
+b1101 aaaab
+b1 aaaac
+0aaabg
+
+#135
+b1101 aaaau
+b1 aaaba
+1aaabg
+
+#140
+b0 aaaab
+b1010 aaaac
+0aaabg
+
+#145
+b0 aaaau
+b1010 aaaba
+1aaabg
+
+#150
+b1010 aaaab
+b1 aaaac
+0aaabg
+
+#155
+b1010 aaaau
+b1 aaaba
+1aaabg
+
+#160
+b1001 aaaac
+b11 aaaad
+0aaabg
+
+#165
+1aaaas
+b1001 aaaba
+1aaabg
+
+#170
+b100 aaaab
+b1101 aaaac
+0aaabg
+
+#175
+b100 aaaau
+b1101 aaaba
+1aaabg
+
+#180
+b1001 aaaab
+b1011 aaaac
+0aaabg
+
+#185
+b1001 aaaau
+b1011 aaaba
+1aaabg
+
+#190
+b1111 aaaab
+b110 aaaac
+0aaabg
+
+#195
+b1111 aaaau
+b110 aaaba
+1aaabg
+
+#200
+b1010 aaaab
+b1100 aaaac
+0aaabg
+
+#205
+b1010 aaaau
+b1100 aaaba
+1aaabg
+
+#210
+b1110 aaaab
+b110 aaaac
+b100 aaaad
+0aaabg
+
+#215
+1aaaak
+0aaaal
+b1110 aaaat
+b110 aaaaz
+b1 aaabf
+1aaabg
+
+#220
+b1000 aaaab
+b100 aaaac
+0aaabg
+
+#225
+b1000 aaaat
+b100 aaaaz
+1aaabg
+
+#230
+b1010 aaaab
+b1011 aaaac
+0aaabg
+
+#235
+b1010 aaaat
+b1011 aaaaz
+1aaabg
+
+#240
+b111 aaaab
+b0 aaaac
+0aaabg
+
+#245
+b111 aaaat
+b0 aaaaz
+1aaabg
+
+#250
+b1 aaaab
+b1001 aaaac
+0aaabg
+
+#255
+b1 aaaat
+b1001 aaaaz
+1aaabg
+
+#260
+b1111 aaaab
+b0 aaaac
+b101 aaaad
+0aaabg
+
+#265
+1aaaar
+b1111 aaaat
+b0 aaaaz
+1aaabg
+
+#270
+b110 aaaab
+b1011 aaaac
+0aaabg
+
+#275
+b110 aaaat
+b1011 aaaaz
+1aaabg
+
+#280
+b1000 aaaab
+b100 aaaac
+0aaabg
+
+#285
+b1000 aaaat
+b100 aaaaz
+1aaabg
+
+#290
+b1100 aaaab
+b1000 aaaac
+0aaabg
+
+#295
+b1100 aaaat
+b1000 aaaaz
+1aaabg
+
+#300
+b1110 aaaab
+b110 aaaac
+0aaabg
+
+#305
+b1110 aaaat
+b110 aaaaz
+1aaabg
+
+#310
+b1001 aaaab
+b1000 aaaac
+b110 aaaad
+0aaabg
+
+#315
+b1001 aaaat
+b0 aaaaz
+1aaabg
+
+#320
+b1111 aaaab
+b1110 aaaac
+0aaabg
+
+#325
+b1111 aaaat
+1aaabg
+
+#330
+b101 aaaab
+b1000 aaaac
+0aaabg
+
+#335
+b101 aaaat
+1aaabg
+
+#340
+b1001 aaaab
+b101 aaaac
+0aaabg
+
+#345
+b1001 aaaat
+1aaabg
+
+#350
+b1110 aaaab
+b11 aaaac
+0aaabg
+
+#355
+b1110 aaaat
+1aaabg
+
+#360
+b1 aaaab
+b1101 aaaac
+b111 aaaad
+0aaabg
+
+#365
+0aaaak
+1aaaam
+b1 aaaav
+b1101 aaabb
+b10 aaabf
+1aaabg
+
+#370
+b1001 aaaab
+b1010 aaaac
+0aaabg
+
+#375
+b1001 aaaav
+b1010 aaabb
+1aaabg
+
+#380
+b1 aaaab
+b100 aaaac
+0aaabg
+
+#385
+b1 aaaav
+b100 aaabb
+1aaabg
+
+#390
+b101 aaaab
+b1001 aaaac
+0aaabg
+
+#395
+b101 aaaav
+b1001 aaabb
+1aaabg
+
+#400
+b100 aaaab
+b111 aaaac
+0aaabg
+
+#405
+b100 aaaav
+b111 aaabb
+1aaabg
+
+#410
+b10 aaaab
+b11 aaaac
+b1000 aaaad
+0aaabg
+
+#415
+0aaaam
+1aaaan
+b10 aaaaw
+b11 aaabc
+b11 aaabf
+1aaabg
+
+#420
+b111 aaaab
+b1001 aaaac
+0aaabg
+
+#425
+b111 aaaaw
+b1001 aaabc
+1aaabg
+
+#430
+b1111 aaaab
+b1111 aaaac
+0aaabg
+
+#435
+b1111 aaaaw
+b1111 aaabc
+1aaabg
+
+#440
+b1101 aaaab
+b1011 aaaac
+0aaabg
+
+#445
+b1101 aaaaw
+b1011 aaabc
+1aaabg
+
+#450
+b111 aaaab
+0aaabg
+
+#455
+b111 aaaaw
+1aaabg
+
+#460
+b10 aaaab
+b1 aaaac
+b1001 aaaad
+0aaabg
+
+#465
+0aaaan
+1aaaao
+b10 aaaax
+b1 aaabd
+b100 aaabf
+1aaabg
+
+#470
+b100 aaaab
+0aaabg
+
+#475
+b100 aaaax
+1aaabg
+
+#480
+b1111 aaaab
+b1001 aaaac
+0aaabg
+
+#485
+b1111 aaaax
+b1001 aaabd
+1aaabg
+
+#490
+b1010 aaaab
+b1000 aaaac
+0aaabg
+
+#495
+b1010 aaaax
+b1000 aaabd
+1aaabg
+
+#500
+b1110 aaaab
+0aaabg
+
+#505
+b1110 aaaax
+1aaabg
+
+#510
+b1011 aaaab
+b0 aaaac
+b1010 aaaad
+0aaabg
+
+#515
+0aaaao
+1aaaap
+b1011 aaaay
+b101 aaabf
+1aaabg
+
+#520
+b101 aaaab
+b101 aaaac
+0aaabg
+
+#525
+b101 aaaay
+b101 aaabe
+1aaabg
+
+#530
+b1010 aaaab
+b111 aaaac
+0aaabg
+
+#535
+b1010 aaaay
+b111 aaabe
+1aaabg
+
+#540
+b1001 aaaab
+b1111 aaaac
+0aaabg
+
+#545
+b1001 aaaay
+b1111 aaabe
+1aaabg
+
+#550
+b0 aaaab
+b1101 aaaac
+0aaabg
+
+#555
+b0 aaaay
+b1101 aaabe
+1aaabg
+
+#560
+b110 aaaab
+b10 aaaac
+b1011 aaaad
+0aaabg
+
+#565
+1aaabg
+
+#570
+b0 aaaab
+b1101 aaaac
+0aaabg
+
+#575
+1aaabg
+
+#580
+b1011 aaaab
+b1111 aaaac
+0aaabg
+
+#585
+1aaabg
+
+#590
+b1100 aaaab
+b1000 aaaac
+0aaabg
+
+#595
+1aaabg
+
+#600
+b1011 aaaab
+b100 aaaac
+0aaabg
+
+#605
+1aaabg
+
+#610
+b100 aaaab
+b1101 aaaac
+b1100 aaaad
+0aaabg
+
+#615
+1aaabg
+
+#620
+b101 aaaab
+b1000 aaaac
+0aaabg
+
+#625
+1aaabg
+
+#630
+b1110 aaaab
+b100 aaaac
+0aaabg
+
+#635
+1aaabg
+
+#640
+b1 aaaab
+b1000 aaaac
+0aaabg
+
+#645
+1aaabg
+
+#650
+b1100 aaaab
+b0 aaaac
+0aaabg
+
+#655
+1aaabg
+
+#660
