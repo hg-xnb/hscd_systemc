@@ -91,6 +91,10 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "global.h": "c",
+        "nn_digitmult.h": "c",
+        "nn.h": "c",
+        "digit.h": "c"
     }
 }
